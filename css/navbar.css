@@ -1,0 +1,91 @@
+/* ************************* */
+/* NAVBAR */
+/* ************************* */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 90%;
+  width: 100%;
+  padding: 1.2rem 5rem 1.2rem 5rem;
+  display: flex;
+  align-items: center;
+  background: var(--mainWhite);
+  z-index: 1;
+}
+
+.navbar-center {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.menu-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.menu-btn {
+  font-size: 1.8rem;
+}
+
+.menu-icon {
+  font-size: 3rem;
+}
+
+.menu h2 {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+.menu ul {
+  list-style: none;
+  margin-left: 2rem;
+  padding: 0;
+  font-size: 1.4rem;
+}
+
+.menu li {
+  margin: 1rem 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--mainBlack);
+}
+
+
+.nav-icon {
+  font-size: 2.2rem;
+  color: var(--mainBlack);
+}
+
+
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-items {
+  position: absolute;
+  top: -.8rem;
+  right: -.8rem;
+  background: var(--alertColor);
+  padding: .1rem .5rem;
+  border-radius: 30%;
+  color: var(--mainWhite);
+  font-size: 1.2rem;
+}
+
+.smart-header {
+  margin-top: 0;
+  height: 7.5rem;
+  width: auto;
+}

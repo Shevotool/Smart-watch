@@ -1,0 +1,197 @@
+<!-- product-view.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop - Smart Watch</title>
+
+  <!-- Meta -->
+  <link rel="icon" href="images/smart-watch-logo.png" />
+  <!-- ion icons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- custom css -->
+  <!--   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="queries.css" /> -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/universal.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/cart.css" />
+  <link rel="stylesheet" href="css/menu.css" />
+  <link rel="stylesheet" href="css/buttons.css" />
+  <link rel="stylesheet" href="css/products.css" />
+  <link rel="stylesheet" href="css/queries.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+
+<body data-dark>
+  <!-- Navbar -->
+  <nav class="navbar ">
+    <div class="navbar-center">
+      <!-- Menu btn -->
+      <div class="menu-flex">
+        <ion-icon name="reorder-two-outline" class="menu-icon"></ion-icon>
+        <div class="menu-btn">Menu</div>
+      </div>
+
+      <!-- Overlay -->
+      <div class="menu-overlay"></div>
+
+      <!-- Panel -->
+      <div class="menu">
+        <span class="close-cart-menu">
+          <i class="fas fa-window-close"></i>
+        </span>
+        <h2>Shop</h2>
+        <ul>
+          <li><a href="index.html" class="link">Watches</a></li>
+          <li><a href="#" class="link">Favorites</a></li>
+          <li><a href="#" class="link">Spare Parts</a></li>
+          <li><a href="#" class="link">About Us</a></li>
+        </ul>
+        <h2>Service</h2>
+        <ul>
+          <li><a href="#" class="link">Store</a></li>
+          <li><a href="#" class="link">Sell / Consign</a></li>
+          <li><a href="#" class="link">Shipping and Payments</a></li>
+          <li><a href="#" class="link">Frequently Asked Questions (FAQ)</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo -->
+      <img class="smart-header" src="images/smart-watch-logo-edited.png" alt="store logo" />
+
+      <!-- Dark mode -->
+      <div class="dark-mode-icon" id="dark-mode">
+        <ion-icon name="bulb-outline" class="dark-icon"></ion-icon>
+      </div>
+
+      <div class="cart-btn">
+        </span>
+        <span class="nav-icon"> <i class="fas fa-cart-plus"></i> </span>
+        <div class="cart-items">0</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product -->
+  <div class="product-container">
+    <div id="product-view">
+      <img id="product-image" src="" class="product-element" alt="Product Image">
+    </div>
+    <div class="product-content">
+      <h2 id="product-name" class="product-name"></h2>
+      <div class="flex-content">
+        <p id="product-price" class="product-price"></p><ion-icon name="alert-circle-outline" class="info"></ion-icon>
+      </div>
+      <p id="product-description" class="product-description"></p>
+      <p class="product-stock">In stock</p>
+      <!--  <button class="product-btn product-btn--cart bag-btn">Add to cart</button> -->
+      <button class="product-btn product-btn--cart">Add to cart</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container grid grid--footer">
+      <div class="logo-col">
+        <a href="#" class="footer-logo">
+          <img src="images/smart-watch-logo-footer.png" class="logo" alt="Omnifood logo" />
+        </a>
+
+        <ul class="social-links">
+          <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-instagram"></ion-icon></a></li>
+          <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-facebook"></ion-icon></a></li>
+          <li><a class="footer-link" href="#"><ion-icon class="social-icon" name="logo-twitter"></ion-icon></a></li>
+        </ul>
+
+        <p class="copyright">Copyright &copy; <span class="year">2027</span> by Smart Watch,Inc. All rights reserved.
+        </p>
+
+      </div>
+      <div class="address-col">
+        <p class="footer-heading">Contact Us</p>
+        <address class="contacts">
+          <p class="address">
+            623 Harrison St., 2nd Floor, San Francisco, CA 94107
+          </p>
+          <p>
+            <a class="footer-link" href="tel:415-201-6370">415-201-6370</a>
+            <br>
+            <a class="footer-link" href="mailto:shevo25gonzalez@gmail.com">smartwatch@gmail.com</a>
+          </p>
+        </address>
+      </div>
+      <nav class="nav-col">
+        <p class="footer-heading">Account</p>
+        <ul class="footer-nav">
+          <li><a class="footer-link" href="#">Create account</a></li>
+          <li><a class="footer-link" href="#">Sign in</a></li>
+          <li><a class="footer-link" href="#">iOS app</a></li>
+          <li><a class="footer-link" href="#">Android app</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-col">
+        <p class="footer-heading">Company</p>
+        <ul class="footer-nav">
+          <li><a class="footer-link" href="#">About Smart Watch</a></li>
+          <li><a class="footer-link" href="#">For Bussiness</a></li>
+          <li><a class="footer-link" href="#">Cooking partners</a></li>
+          <li><a class="footer-link" href="#">Careers</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-col">
+        <p class="footer-heading">Resources</p>
+        <ul class="footer-nav">
+          <li><a class="footer-link" href="#">Recipe directory</a></li>
+          <li><a class="footer-link" href="#">Help center</a></li>
+          <li><a class="footer-link" href="#">Privacy & terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Cart (Right) -->
+  <div class="cart-overlay">
+    <div class="cart">
+      <span class="close-cart">
+        <i class="fas fa-window-close"></i>
+      </span>
+      <h2>your cart</h2>
+      <div class="cart-content">
+      </div>
+
+      <div class="cart-footer">
+        <h3>your total : $ <span class="cart-total">0</span></h3>
+        <button class="clear-cart banner-btn">clear cart</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Contentful api -->
+  <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+
+  <!-- App js -->
+  <script type="module" defer src="js/products.js"></script>
+  <script defer src="js/darkmode.js"></script>
+
+
+</body>
+
+</html>

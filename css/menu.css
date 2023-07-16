@@ -1,0 +1,59 @@
+/* ************************* */
+/* MENU */
+/* ************************* */
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--mainTransition);
+  background: var(--boxShadowOverlay);
+  z-index: 2;
+  visibility: hidden;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  z-index: 3;
+  background: var(--mainWhite);
+  padding: 1.5rem;
+  transition: var(--mainTransition);
+  transform: translateX(-100%);
+  box-shadow: 2px 8px 16px 3px var(--mainBoxShadow);
+}
+
+.menu-icon {
+  max-width: 4rem;
+}
+
+.showMenu {
+  transform: translateX(0);
+
+}
+
+.transparentBcg {
+  visibility: visible;
+}
+
+.close-cart-menu {
+  margin-left: 95%;
+}
+
+.close-cart {
+  font-size: 1.9rem;
+  cursor: pointer;
+}
+
+.cart h2 {
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+}
