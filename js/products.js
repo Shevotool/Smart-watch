@@ -71,19 +71,15 @@ productBtn.addEventListener("click", function () {
   Storage.saveCart(cart);
   setCartValues(cart);
   addCartItem(cartItem);
-  showCart();
   getBagButtons(productBtn);
+  sessionStorage.setItem("showCart", "true");
+  window.location.href = "index.html";
 });
 
 clearCartBtn.addEventListener("click", function () {
   productBtn.innerText = "Add to Cart";
   productBtn.disabled = false;
 });
-
-function showCart() {
-  cartOverlay.classList.add("transparentBcg");
-  cartDOM.classList.add("showCart");
-}
 
 function hideCart() {
   cartOverlay.classList.remove("transparentBcg");
@@ -97,12 +93,6 @@ cartContent.addEventListener("click", function (e) {
     hideCart();
   }
 });
-
-///////////////////////////////////////////////////////////
-// Initial Page Load
-/* document.addEventListener("DOMContentLoaded", () => {
-
-}); */
 
 ///////////////////////////////////////////////////////////
 // Show Product Image

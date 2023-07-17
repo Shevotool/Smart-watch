@@ -1,10 +1,12 @@
 "use strict";
 
+export { Storage, cart, cartContent, cartItems, cartTotal };
+
 ///////////////////////////////////////////////////////////
 // Contenful api
 
 const client = contentful.createClient({
-  // This is the space ID. A space is like a project folder in Contentful terms
+  // This is the space ID in Contentful
   space: "1vweu86iekvi",
   // This is the access token for this space. Normally you get both ID and the token in the Contentful web app
   accessToken: "S9ISYI4TLdUw1NjlOeu4XHDbWNVA0VYvLWWf8l1HUNc",
@@ -91,11 +93,6 @@ class Products {
       let contenful = await client.getEntries({
         content_type: "comfyHouseProducts",
       });
-
-      /*    let result = await fetch("products.json");
-      let data = await result.json(); */
-
-      /*  let products = Array.from(data.items); */
       let products = contenful.items;
       products = products.map((item) => {
         const { title, price, description } = item.fields;
@@ -188,13 +185,9 @@ class UI {
         let cartItem = { ...Storage.getProduct(id), amount: 1 };
         // add product to the cart
         cart = [...cart, cartItem];
-        // save cart in local storage
         Storage.saveCart(cart);
-        // set cart values
         this.setCartValues(cart);
-        // display cart item
         this.addCartItem(cartItem);
-        // show the cart
         this.showCart();
       });
     });
@@ -289,12 +282,6 @@ class UI {
     cartItems.forEach((id) => this.removeItem(id));
 
     while (cartContent.children.length > 0) {
-      /* if (cartContent.contains(cartContent.children[0])) {
-        cartContent.removeChild(cartContent.children[0]);
-      } */
-      /*  if (cartContent.contains(removeItem.parentElement.parentElement)) {
-        cartContent.removeChild(removeItem.parentElement.parentElement);
-      } */
       let removeItem = cartContent.children[0];
       cartContent.removeChild(removeItem);
     }
@@ -388,7 +375,7 @@ function filterPrice(input, selector) {
     return;
   }
 
-  // Evento keyup
+  // keyup event
   inputElement.addEventListener("keyup", (e) => {
     if (e.key === "Escape") {
       inputElement.value = "";
@@ -397,14 +384,13 @@ function filterPrice(input, selector) {
     filterElements();
   });
 
-  // Evento click
   document.addEventListener("click", (e) => {
     if (e.target.matches(input)) {
       filterElements();
     }
   });
 
-  // Función para filtrar los elementos
+  // Filter elements
   function filterElements() {
     document.querySelectorAll(selector).forEach((el) => {
       el.textContent.toLowerCase().includes(inputElement.value.toLowerCase())
@@ -414,8 +400,6 @@ function filterPrice(input, selector) {
   }
 }
 
-export { Storage, cart, cartContent, cartItems, cartTotal };
-
 ///////////////////////////////////////////////////////////
 // Footer date
 
@@ -423,3 +407,12 @@ export { Storage, cart, cartContent, cartItems, cartTotal };
 const year = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 year.textContent = currentYear;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const showCartValue = sessionStorage.getItem("showCart");
+  if (showCartValue === "true") {
+    cartOverlay.classList.add("transparentBcg");
+    cartDOM.classList.add("showCart");
+    sessionStorage.removeItem("showCart");
+  }
+});

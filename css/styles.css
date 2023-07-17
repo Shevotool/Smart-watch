@@ -1,38 +1,4 @@
 /* ************************* */
-/* DARK THEME */
-/* ************************* */
-
-.dark-theme-btn {
-  border-radius: 100%;
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.8rem;
-  font-weight: bold;
-  cursor: pointer;
-  outline: 0;
-  border: 0;
-  transition: all 0.3s ease-out;
-  background-color: #222;
-}
-
-.data-dark {
-  width: 3rem;
-}
-
-.dark-mode-icon {
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  margin-right: 11rem;
-  font-size: 2.2rem;
-}
-
-.dark-mode {
-  background-color: var(--backgroundFooter);
-  color: var(--mainWhite);
-}
-
-/* ************************* */
 /* HERO SECTION */
 /* ************************* */
 
@@ -89,13 +55,10 @@
 .products-center {
   width: 90vw;
   margin-left: 2rem;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   grid-row-gap: 2rem;
   padding: 2rem;
-  /*   overflow-y: auto; */
-  /* Habilita el scroll vertical */
 }
 
 .img-container {
@@ -110,7 +73,6 @@
   margin-left: 4rem;
 }
 
-
 .product-title-search {
   font-size: 1.4rem;
   margin-top: 2rem;
@@ -119,8 +81,6 @@
 .product-line {
   margin-top: -2.5rem;
 }
-
-
 
 .fa-shopping-cart {
   margin-right: 0.5rem;
@@ -138,7 +98,6 @@
 }
 
 .img-container:hover .product-img {
-  /*  opacity: 0.5; */
   transform: scale(1.2);
   cursor: pointer;
 }
@@ -157,7 +116,6 @@
   letter-spacing: var(--mainSpacing);
   text-align: center;
 }
-
 
 /* ************************* */
 /* FILTER */
@@ -190,7 +148,6 @@
 }
 
 .filter {
-  /*   display: none; */
   visibility: hidden;
   opacity: 0;
   order: 1;
@@ -199,4 +156,47 @@
 .sticky {
   position: sticky;
   top: 90px;
+}
+
+/* ************************* */
+/*  CONTAINER - LEFT */
+/* ************************* */
+
+.container-left {
+  background-color: var(--alertColor);
+  height: 70vh;
+}
+
+/* ************************* */
+/* DARK THEME */
+/* ************************* */
+
+.dark-theme-btn {
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+  background-color: #222;
+}
+
+.data-dark {
+  width: 3rem;
+}
+
+.dark-mode-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  margin-right: 11rem;
+  font-size: 2.2rem;
+}
+
+.dark-mode {
+  background-color: var(--backgroundFooter);
+  color: var(--mainWhite);
 }

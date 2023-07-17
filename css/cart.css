@@ -106,8 +106,14 @@
   font-size: 1.6rem;
 }
 
+.space {
+  color: var(--removeItem);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /* ************************* */
-/* BTN CART */
+/* VIEW CART */
 /* ************************* */
 .banner-btn {
   padding: 1rem 3rem;
@@ -124,4 +130,25 @@
 .banner-btn:hover {
   background: transparent;
   color: var(--primaryColor);
+}
+
+/* ************************* */
+/* CLEAR CART */
+/* ************************* */
+
+.danger-btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--alertColor);
+  color: var(--mainWhite);
+  border: 1px solid var(--alertColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+
+.danger-btn:hover {
+  background: transparent;
+  color: var(--alertColor);
 }
