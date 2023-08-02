@@ -54,8 +54,8 @@
         </span>
         <h2>Shop</h2>
         <ul>
-          <li><a href="#" class="link">Watches</a></li>
-          <li><a href="cart.html" class="link">View Cart</a></li>
+          <li><a href="index.html" class="link">Watches</a></li>
+          <li><a href="#" class="link">View Cart</a></li>
           <li><a href="#" class="link">About Us</a></li>
         </ul>
         <h2>Service</h2>
@@ -87,40 +87,35 @@
   <div class="hero-container">
     <header class="hero">
       <div class="banner">
-        <h1 class="banner-title">Watches</h1>
-        <p class="banner-paragraph">Our timepiece specialists offer expert guidance for acquiring or selling exquisite
-          new/used luxury watches.</p>
+        <h1 class="banner-title">Cart</h1>
       </div>
     </header>
   </div>
 
-  <!-- Products -->
   <section class="products" data-dark>
-    <div class="products-container-left sticky">
-      <p class="product-title-search">Search</p>
-      <!-- ***** Filter ***** -->
-      <!-- Search -->
-      <div class="flex-filter">
-        <input type="search" placeholder="Search..." class="card-filter" data-dark>
+    <!-- Products -->
+    <div class="cart-products">
+      <div class="cart-container-left">
+        <!-- Cart items will be displayed here -->
+        <div class="cart-flex-container-left">
+          <p>Product</p>
+          <p>Price</p>
+          <p>Subtotal</p>
+        </div>
+        <div class="cart-product-content"></div>
+        <!-- ... Rest of the cart container ... -->
       </div>
-      <hr class="product-line">
-      <!-- Price -->
-      <p class="product-title-search">Price</p>
-      <div class="flex-filter">
-        <input type="number" placeholder="$0" class="card-price" data-dark>
-      </div>
-      <hr class="product-line">
-      <!-- ***** Filter ***** -->
 
-      <!-- ***** container-left ***** -->
-      <div class="container-left">
-
+      <div class="cart-container-right">
+        <p class="cart-totals">Cart totals</p>
+        <p class="subtotal">subtotal</p>
+        <p class="total">Total</p>
+        <button class="btn btn-checkout">Proceed to checkout</button>
+        <p class="or">- or -</p>
+        <button class="btn btn-paypal">
+          <span class="pay">Pay</span><span class="pal">Pal</span></button>
       </div>
     </div>
-
-
-    <!-- Products -->
-    <div class="products-center"></div>
   </section>
 
   <!-- Footer -->
@@ -185,13 +180,14 @@
 
   <!-- Cart (Right) -->
   <div class="cart-overlay">
-    <div class="cart">
+    <div class="cart  ">
       <span class="close-cart">
         <i class="fas fa-window-close"></i>
       </span>
       <h2>your cart</h2>
       <div class="cart-content">
       </div>
+
       <div class="cart-footer">
         <h3>your total : $ <span class="cart-total">0</span></h3>
         <hr class="space">
@@ -205,8 +201,8 @@
   <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
 
   <!-- App js -->
-  <script type="module" defer src="js/app.js"></script>
-  <script type="module" defer src="js/cart.js"></script>
+
+  <script type="module" src="js/cart.js"></script>
   <script defer src="js/darkmode.js"></script>
 
 </body>

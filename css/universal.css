@@ -64,6 +64,9 @@
   --removeItem: #808080;
   --stockProduct: #77a464;
   --backgroundFooter: #1D1D1B;
+  --paypal: #ffc439;
+  --pal: #2e89f8;
+  --paypalHover: #f0b733;
 
   --mainSpacing: 0.1rem;
   --mainTransition: all 0.4s linear;

@@ -25,6 +25,7 @@ const cartTotal = document.querySelector(".cart-total");
 const cartContent = document.querySelector(".cart-content");
 const productsDOM = document.querySelector(".products-center");
 const cardFilter = document.querySelector(".card-filter");
+const viewCartButton = document.querySelector(".view-cart");
 
 ///////////////////////////////////////////////////////////
 // Menu
@@ -77,10 +78,22 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", updateSticky);
     updateSticky();
   }
+
+  viewCartButton.addEventListener("click", function () {
+    window.location.href = "cart.html";
+  });
 });
 
 // cart
 let cart = [];
+
+export function getCart() {
+  return cart;
+}
+
+export function updateCart(newCart) {
+  cart = newCart;
+}
 
 // buttons
 let buttonsDOM = [];

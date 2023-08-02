@@ -17,3 +17,42 @@
 .bag-btn:hover {
   color: var(--mainWhite);
 }
+
+
+.btn-checkout {
+  margin-top: 3rem;
+  width: 90%;
+  display: block;
+  font-size: 1.4rem;
+  background: var(--primaryColor);
+  color: var(--mainGrey);
+  border: none;
+  padding: 1.5rem 0.75rem;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-checkout:hover {
+  background: var(--secondBlack);
+}
+
+.btn-paypal {
+  display: block;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  width: 90%;
+  background: var(--paypal);
+  color: var(--mainGrey);
+  border: none;
+  padding: 1.5rem 0.75rem;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-paypal:hover {
+  background: var(--paypalHover);
+}

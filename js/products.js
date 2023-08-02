@@ -18,6 +18,7 @@ const productDescriptionElement = document.querySelector(
   "#product-description"
 );
 const productBtn = document.querySelector(".product-btn");
+const viewCartButton = document.querySelector(".view-cart");
 const cartOverlay = document.querySelector(".cart-overlay");
 const cartDOM = document.querySelector(".cart");
 const clearCartBtn = document.querySelector(".clear-cart");
@@ -120,3 +121,9 @@ if (productDescription) {
   productDescriptionElement.textContent =
     decodeURIComponent(productDescription);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  viewCartButton.addEventListener("click", function () {
+    window.location.href = "cart.html";
+  });
+});
