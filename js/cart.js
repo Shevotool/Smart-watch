@@ -3,8 +3,6 @@
 import { cart, getCart, updateCart } from "./app.js";
 
 const cartContent = document.querySelector(".cart-product-content");
-const subTotal = document.querySelector(".subtotal");
-const total = document.querySelector(".total");
 
 ///////////////////////////////////////////////////////////
 // Function to generate the HTML for a product in the cart
