@@ -96,6 +96,20 @@
     .smart-header {
       margin-right: 5rem;
     }
+
+    /* ************************* */
+    /* CART PRODUCTS PAGE */
+    /* ************************* */
+
+    .cart-products {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-container-right {
+      margin: 0 auto;
+    }
+
   }
 
   /**************************/

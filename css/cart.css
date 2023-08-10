@@ -239,17 +239,17 @@
   color: var(--pal);
 }
 
-.item-amount {
+.item-amount-cart {
   font-size: 1.4rem;
   font-weight: bold;
 }
 
 .subtotal-flex {
   display: flex;
-  gap: 25rem;
+  gap: 40%;
 }
 
 .total-flex {
   display: flex;
-  gap: 27.4rem;
+  gap: 50%;
 }

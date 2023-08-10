@@ -79,9 +79,11 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSticky();
   }
 
-  viewCartButton.addEventListener("click", function () {
-    window.location.href = "cart.html";
-  });
+  if (viewCartButton) {
+    viewCartButton.addEventListener("click", function () {
+      window.location.href = "cart.html";
+    });
+  }
 });
 
 // cart
