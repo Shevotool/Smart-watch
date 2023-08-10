@@ -182,5 +182,9 @@
     .product-stock {
       margin-top: 0rem;
     }
+
+    .cart-container-right {
+      width: 100%;
+    }
   }
 }
