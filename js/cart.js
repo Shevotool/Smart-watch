@@ -3,16 +3,20 @@
 import { cart, getCart, updateCart } from "./app.js";
 
 const cartContent = document.querySelector(".cart-product-content");
+const cartSubtotalElement = document.querySelector(".cart-subtotal");
+const carttotalElement = document.querySelector(".cart-total-element");
+const cartTotalElement = document.querySelector(".cart-total");
+const cartItemsElement = document.querySelector(".cart-items");
 
 ///////////////////////////////////////////////////////////
 // Function to generate the HTML for a product in the cart
 function generateCartItemHTML(item) {
   return `
-    <div class="cart-item">
+    <div class="cart-item-product">
  <img src=${item.image} />
             <div>
               <h4>${item.title}</h4>
-              <h5>$${item.price}</h5>
+              <h5>Price: $${item.price}</h5>
               <span class="remove-item" data-id=${item.id}>remove</span>
             </div>
        
@@ -77,15 +81,27 @@ function cartTotals() {
     tempTotal += item.price * item.amount;
     itemsTotal += item.amount;
   });
-  const cartSubtotalElement = document.querySelector(".cart-subtotal");
 
   if (cartSubtotalElement) {
     cartSubtotalElement.textContent = `$${tempTotal.toFixed(2)}`;
   }
 
-  const carttotalElement = document.querySelector(".cart-total-element");
-
   if (carttotalElement) {
     carttotalElement.textContent = `$${tempTotal.toFixed(2)}`;
   }
+
+  const clearCartBtn = document.querySelector(".clear-cart");
+
+  clearCartBtn.addEventListener("click", clearCart);
+}
+
+function clearCart() {
+  cartContent.innerHTML = "";
+
+  cartTotalElement.textContent = "0";
+  cartItemsElement.textContent = "0";
+  cartSubtotalElement.textContent = "0";
+  carttotalElement.textContent = "0";
+
+  saveCartToLocalStorage([]);
 }
