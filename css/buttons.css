@@ -56,3 +56,18 @@
 .btn-paypal:hover {
   background: var(--paypalHover);
 }
+
+.btn-cart-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.view-cart {
+  width: 15rem;
+}
+
+.clear-cart {
+  width: 15rem;
+}

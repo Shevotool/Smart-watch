@@ -13,10 +13,10 @@ const cartItemsElement = document.querySelector(".cart-items");
 function generateCartItemHTML(item) {
   return `
     <div class="cart-item-product">
- <img src=${item.image} />
+ <img src=${item.image} class="img-cart-product" />
             <div>
-              <h4>${item.title}</h4>
-              <h5>Price: $${item.price}</h5>
+              <h4 class="title-cart-product">${item.title}</h4>
+              <h5 class="price-cart-product">Price: $${item.price}</h5>
               <span class="remove-item" data-id=${item.id}>remove</span>
             </div>
        
@@ -44,8 +44,7 @@ function removeCartItem(id) {
   updateCart(updatedCart);
   displayCartItems();
   saveCartToLocalStorage(updatedCart);
-  setCartValues(updatedCart);
-  //location.reload(); // Reload the page after removing the item
+  location.reload();
 }
 
 ///////////////////////////////////////////////////////////
@@ -97,7 +96,6 @@ function cartTotals() {
 
 function clearCart() {
   cartContent.innerHTML = "";
-
   cartTotalElement.textContent = "0";
   cartItemsElement.textContent = "0";
   cartSubtotalElement.textContent = "0";
