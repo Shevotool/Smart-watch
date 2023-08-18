@@ -31,6 +31,8 @@
   letter-spacing: var(--mainSpacing);
   font-weight: bold;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn-checkout:hover {
@@ -51,6 +53,8 @@
   font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .btn-paypal:hover {

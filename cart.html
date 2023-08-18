@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="css/buttons.css" />
   <link rel="stylesheet" href="css/queries.css" />
   <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/popup.css" />
 </head>
 
 <body>
@@ -55,8 +56,8 @@
         <h2>Shop</h2>
         <ul>
           <li><a href="index.html" class="link">Watches</a></li>
-          <li><a href="#" class="link">View Cart</a></li>
-          <li><a href="#" class="link">About Us</a></li>
+          <li><a href="cart.html" class="link">View Cart</a></li>
+          <li><a href="about.html" class="link">About Us</a></li>
         </ul>
         <h2>Service</h2>
         <ul>
@@ -109,10 +110,11 @@
         <p class="cart-totals">Cart totals</p>
         <p class="subtotal">Subtotal: <span class="cart-subtotal">$0</span></p>
         <p class="total">Total: <span class="cart-total-element">$0</span></p>
-        <button class="btn btn-checkout">Proceed to checkout</button>
+        <a href="#popup" class="btn btn-checkout">Proceed to checkout</a>
         <p class="or">- or -</p>
-        <button class="btn btn-paypal">
-          <span class="pay">Pay</span><span class="pal">Pal</span></button>
+        <a href="#popup" class="btn btn-paypal">
+          <span class="pay">Pay</span><span class="pal">Pal</span></a>
+
       </div>
     </div>
   </section>
@@ -139,7 +141,7 @@
         <p class="footer-heading">Contact Us</p>
         <address class="contacts">
           <p class="address">
-            623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            123 London Road, Suite 45 Manchester, United Kingdom
           </p>
           <p>
             <a class="footer-link" href="tel:415-201-6370">627-229-6950</a>
@@ -151,7 +153,7 @@
       <nav class="nav-col">
         <p class="footer-heading">Account</p>
         <ul class="footer-nav">
-          <li><a class="footer-link" href="#">Create account</a></li>
+          <li><a class="footer-link" href="#popup">Create account</a></li>
           <li><a class="footer-link" href="#">Sign in</a></li>
           <li><a class="footer-link" href="#">iOS app</a></li>
           <li><a class="footer-link" href="#">Android app</a></li>
@@ -160,7 +162,7 @@
       <nav class="nav-col">
         <p class="footer-heading">Company</p>
         <ul class="footer-nav">
-          <li><a class="footer-link" href="#">About Smart Watch</a></li>
+          <li><a class="footer-link" href="about.html">About Smart Watch</a></li>
           <li><a class="footer-link" href="#">For bussiness</a></li>
           <li><a class="footer-link" href="#">Bussiness partners</a></li>
           <li><a class="footer-link" href="#">Careers</a></li>
@@ -194,6 +196,29 @@
           <button class="view-cart banner-btn">View cart</button>
           <button class="clear-cart danger-btn">Clear cart</button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <div class="content">
+      <h3 class="login">Welcome to Smart Watch!</h3>
+      <p class="create-account">Create your account</p>
+      <div class="input-content"><label for="email" class="input-label">Email</label>
+        <input type="email" class="input" placeholder="&nbsp;&nbsp;Enter your valid email adress">
+        <a href="#products" class="popup-close">&times;</a>
+      </div>
+
+      <div class="input-content"><label for="password" class="input-label">Full name</label>
+        <input type="name" class="input" placeholder="&nbsp;&nbsp;Your name as seen by others in the app">
+      </div>
+
+      <div class="input-content"><label for="password" class="input-label">Password</label>
+        <input type="password" class="input" placeholder="&nbsp;&nbsp;Create an 8 characters min">
+      </div>
+      <div class="sign-up-flex">
+        <a href="#" class="sign-up">Sign up now</a>
       </div>
     </div>
   </div>

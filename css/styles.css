@@ -158,14 +158,6 @@
   top: 90px;
 }
 
-/* ************************* */
-/*  CONTAINER - LEFT */
-/* ************************* */
-
-.container-left {
-  height: 70vh;
-  /*  background-color: blue; */
-}
 
 /* ************************* */
 /* DARK THEME */
@@ -199,4 +191,60 @@
 .dark-mode {
   background-color: var(--backgroundFooter);
   color: var(--mainWhite);
+}
+
+/* ************************* */
+/*  CONTAINER - LEFT */
+/* ************************* */
+
+.container-left {
+  height: 70vh;
+}
+
+/* ************************* */
+/* Card */
+/* ************************* */
+.img-card {
+  display: block;
+  margin: 0 auto;
+  margin-top: 8rem;
+  max-width: 80%;
+}
+
+.ceo-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.ceo-founder {
+  margin-top: 1rem;
+  text-align: center;
+  color: rgb(78, 78, 94);
+}
+
+.ceo-text {
+  margin-left: 2rem;
+  line-height: 1.4;
+  margin-top: 2rem;
+}
+
+/* ************************* */
+/* About us */
+/* ************************* */
+
+.about-us {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+
+}
+
+.about-text {
+  width: 80%;
+  margin-top: 10rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+
 }
