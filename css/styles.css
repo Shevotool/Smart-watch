@@ -7,7 +7,6 @@
 }
 
 .hero {
-  /*   min-height: calc(50vh - 60px); */
   background: url("/images/header-logo.png") center top/cover no-repeat;
   background-position: center;
 }
@@ -127,16 +126,7 @@
   text-align: center
 }
 
-.card-filter {
-  display: block;
-  margin-left: 2rem;
-  font-size: 1.4rem;
-  margin-top: 1.6rem;
-  margin-bottom: 3.2rem;
-  border: none;
-  outline: none;
-}
-
+.card-filter,
 .card-price {
   display: block;
   margin-left: 2rem;
@@ -157,7 +147,6 @@
   position: sticky;
   top: 90px;
 }
-
 
 /* ************************* */
 /* DARK THEME */
@@ -202,32 +191,74 @@
 }
 
 /* ************************* */
-/* Card */
+/* ACCORDION */
 /* ************************* */
-.img-card {
-  display: block;
-  margin: 0 auto;
-  margin-top: 8rem;
-  max-width: 80%;
+.accordion {
+  width: 100%;
+  margin: 6rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
 }
 
-.ceo-name {
+.item {
+  background-color: transparent;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 1.7rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 2.4rem;
+  row-gap: 3.2rem;
+  align-items: center;
+}
+
+.number,
+.text {
   font-size: 1.6rem;
-  font-weight: bold;
-  margin-top: 2rem;
-  text-align: center;
+  font-weight: 500;
 }
 
-.ceo-founder {
-  margin-top: 1rem;
-  text-align: center;
-  color: rgb(78, 78, 94);
+.number {
+  color: #ced4da;
 }
 
-.ceo-text {
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  stroke: var(--stockProduct);
+}
+
+.hidden-box {
+  grid-column: 2;
+  display: none;
+}
+
+.hidden-box p {
+  line-height: 1.6;
+  margin-bottom: 2.4rem;
+}
+
+.hidden-box ul {
+  color: #868e96;
   margin-left: 2rem;
-  line-height: 1.4;
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* OPEN STATE */
+.open {
+  border-top: 4px solid var(--stockProduct);
+}
+
+.open .hidden-box {
+  display: block;
+}
+
+.open .number,
+.open .text {
+  color: var(--stockProduct);
 }
 
 /* ************************* */
@@ -238,7 +269,6 @@
   height: 50vh;
   display: flex;
   justify-content: center;
-
 }
 
 .about-text {
@@ -246,5 +276,13 @@
   margin-top: 10rem;
   font-size: 1.6rem;
   line-height: 1.6;
+}
 
+.create-account {
+  text-decoration: none;
+  color: var(--stockProduct);
+}
+
+.create-account:hover {
+  color: var(--stockProductDarker);
 }

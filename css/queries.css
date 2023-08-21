@@ -12,6 +12,10 @@
 /* BELOW 1200px (Landscape Tablets) */
 /**************************/
 
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
 @media (max-width: 75em) {
   .grid {
     column-gap: 4.8rem;
@@ -42,7 +46,6 @@
 
 @media (max-width: 59em) {
   html {
-    /* 8px / 16px = 0.5 = 50% */
     font-size: 50%;
   }
 
@@ -54,7 +57,12 @@
     width: 50%;
   }
 
+  .content .login {
+    padding-top: 2rem;
+  }
+
   .content .input-content {
+    padding-top: 1.5rem;
     width: 90%;
     margin: 0 auto;
   }
@@ -84,9 +92,12 @@
     padding-bottom: 1rem;
   }
 
-  .input-content .input,
+  .input-content .input {
+    border: 1px solid #ccc;
+  }
+
   .input-content .input-label {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
   }
 
@@ -248,6 +259,20 @@
 
   .cart-item-product {
     gap: 10rem;
+  }
+
+  .popup .content {
+    width: 90%;
+  }
+
+  .content .login {
+    margin-top: 8rem;
+  }
+
+  .content .input-content {
+    padding-top: 2rem;
+    width: 100%;
+    margin: 0 auto;
   }
 
 }
